@@ -51,11 +51,12 @@ object-fit: cover;
 
 							<div class="text-center">
 							    <h5 class="display-5 text-white">Publish your passions, your way</h5>
-								<p>Create a unique and beautiful blog easily.</p>
+							    <p>Explore, Engage, and Enlighten: Your Gateway to the World of Insightful Blogging !</p>
+								
 							</div>
 								
 							<div class="text-center">
-								<img src="image/about.jpg" class="cov">
+								<img src="image/aboutpage.jpg" class="cov">
 							</div>
 							
 							<div class="text-center">

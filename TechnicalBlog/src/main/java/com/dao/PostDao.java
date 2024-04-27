@@ -170,6 +170,45 @@ public class PostDao {
 		
 	}
 	
+	// get post by User id
+		public ArrayList<Post> getPostById(int Id)
+		{
+			Post post = null;
+			String q = "select * from post where id=?";
+			ArrayList<Post> posts = new ArrayList<>();
+			
+			try {
+				
+				PreparedStatement p = this.con.prepareStatement(q);
+				
+				p.setInt(1, Id);
+				
+				ResultSet set = p.executeQuery();
+				
+				while(set.next())
+				{
+					
+					 int pid = set.getInt("pid");
+					 String title = set.getString("title");
+					 String content = set.getString("content");
+					 String code = set.getString("code");
+					 String image = set.getString("image");
+					 Timestamp creationdate = set.getTimestamp("creationdate");
+					 int cid = set.getInt("cid");
+					 int id = set.getInt("id");
+					 post = new Post(pid,title,content,code,image,creationdate,cid,id);
+					 posts.add(post);
+					
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			return posts;
+			
+		}
+	
 	
 	
 }

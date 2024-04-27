@@ -158,8 +158,7 @@ object-fit: cover;
 						 			UserDao userDao = new UserDao(ConnectionProvider.getConnection());
 						 			User postOfUser =	userDao.getUserById(p.getId());
 						 		%>
-						 	
-						 		<p class="post-user"><a href="#"> <%=postOfUser.getName()%> has posted </a></p>
+						 		<p class="post-user"><a href="userPost.jsp?pid=<%=p.getId() %>"> <%=postOfUser.getName()%> has posted </a></p>
 						 	</div>
 						 	
 						 	<div class="col-md-4">
@@ -191,8 +190,6 @@ object-fit: cover;
 						
 						<%@include file = "checklike.jsp" %>
 						
-						
-					
 					
 					</div>
 					
@@ -212,17 +209,13 @@ object-fit: cover;
 					{
 							likefunc = "doLike";
 							likeclass= "fa fa-thumbs-o-up";
-						}
+					}
 						%></span>
-									
-				
-					
 					
 					
 						<a href="#" onClick="<%=likefunc%>(<%=p.getPid() %>,<%=user.getId() %>)" class="btn btn-outline-light btn-sm"><i class="<%=likeclass%>"></i> <span class="like-counter"><%= ldao.countLike(p.getPid()) %></span></a>
 						<!--  <a href="#" class="btn btn-outline-light btn-sm"><i class="fa fa-commenting-o"></i><span></span></a>-->
 					
-				
 				
 					<%@include file = "likeworking.jsp" %>
 				
@@ -230,7 +223,7 @@ object-fit: cover;
 					
 					<!-- comment plugin -->
 					<div class="card-footer">    
-					<div class="fb-comments" data-href="http://localhost:8081/TechnicalBlog/viewblog.jsp?pid=<%=p.getPid() %>" data-width="" data-numposts="3"></div>
+					<div class="fb-comments" data-href="http://localhost:3030/TechnicalBlog/viewblog.jsp?pid=<%=p.getPid() %>" data-width="" data-numposts="3"></div>
 				
 					</div>
 					<!-- end comment plugin -->

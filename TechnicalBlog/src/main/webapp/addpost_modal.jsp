@@ -1,7 +1,12 @@
 <!-- add post modal -->
 		
 		<!-- Modal -->
-		<div class="modal fade" id="addpost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<%@page import="com.entity.User"%>
+<%@page import="com.entity.Category"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.helper.ConnectionProvider"%>
+<%@page import="com.dao.CategoryDao"%>
+<div class="modal fade" id="addpost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header bg-dark text-white">

@@ -1,6 +1,15 @@
 <!-- main content of the body  -->
 
-	<main>
+<%@page import="com.helper.ConnectionProvider"%>
+<%@page import="com.dao.PostDao"%>
+<%@page import="com.dao.CategoryDao"%>
+<%@page import="com.dao.UserDao"%>
+<%@page import="com.dao.LikesDao"%>
+<%@page import="com.entity.Category"%>
+<%@page import="com.entity.Post"%>
+<%@page import="com.entity.User"%>
+<%@page import="java.util.*"%>
+<main>
 		<div class="container">
 			<div class="row mt-4">
 				
@@ -20,7 +29,7 @@
 							 
 					  <%
 						CategoryDao categoryDao3 = new CategoryDao(ConnectionProvider.getConnection());
-						ArrayList<Category> list3 = categoryDao3.getAllCategories();
+						ArrayList <Category> list3 = categoryDao3.getAllCategories();
 								
 						for(Category c:list3)
 						{%>
@@ -34,9 +43,7 @@
 									console.log(catId);
 									var cid = catId;
 									 window.location.replace("profile.jsp?cid="+cid);
-
 								}
-
 									
 							</script>
 					  		
@@ -104,14 +111,14 @@
 								
 								
 									<div class="col-md-6 mt-2">
-										<div class="card">
+										<div class="card" style="height: 600px; position:relative; overflow: hidden ">
 										<!--  <img class="card-img-top" src="image/<%=p.getImage() %>" alt="<%=p.getTitle()%>" width="30px"> -->
-										  <div class="text-center mt-2">
-										 	 <img src="image/<%=p.getImage() %>" alt="<%=p.getTitle()%>" class="cov">
+										  <div class="text-center mt-2" style="max-height:200px; overflow: hidden">
+										 	 <img src="image/<%=p.getImage() %>" alt="<%=p.getTitle()%>" class="cov contain h-auto w-auto" >
 										  </div>	
 											<div class="card-body">
 												<b><%= p.getTitle() %></b>
-												<p><%= p.getContent() %></p>
+												<p class="postContent" style="overflow: hidden;max-height: 250px"><%= p.getContent() %></p>
 												
 											<input type="hidden" id="input" name="input"/>
 											</div>

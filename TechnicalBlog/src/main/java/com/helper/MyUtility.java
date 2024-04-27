@@ -39,14 +39,8 @@ public class MyUtility {
 					 }
 				 }
 				 
-				 Item.write(new File(destinationpath+newfilename));
-				 
-				
-			
+				 Item.write(new File(destinationpath+newfilename));	
 		}
-		
-		
-		
 	}
 		return newfilename;
 	}

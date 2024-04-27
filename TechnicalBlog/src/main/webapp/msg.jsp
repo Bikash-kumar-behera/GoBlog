@@ -1,4 +1,5 @@
 
+<%@page import="com.entity.Message"%>
 <%
 		Message msg = (Message)session.getAttribute("msg");
 		if(msg != null)

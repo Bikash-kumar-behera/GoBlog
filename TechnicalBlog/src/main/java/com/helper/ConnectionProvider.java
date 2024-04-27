@@ -12,10 +12,10 @@ public class ConnectionProvider {
 			if(con == null)
 			{
 				// driver  class load
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				
-				// create a connectin..
-				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/goblog","root","root");
+				// create a connection..
+				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/goblog","root","1234");
 				
 			}
 			

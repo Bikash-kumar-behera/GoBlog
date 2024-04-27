@@ -55,7 +55,7 @@
 							
 							  <br>
 							  <div class="container text-center">
-							  <button type="submit" class="btn btn-dark">Submit</button>
+							  <button type="submit" class="btn btn-dark">Login</button>
 								</div>	
 							</form>
 													

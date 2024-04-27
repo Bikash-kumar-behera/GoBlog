@@ -56,7 +56,6 @@
 								    	</tr>
 								  </tbody>
 								</table>
-							
 						</div>
 					
 					<!-- profile edit -->
@@ -73,8 +72,7 @@
 							    <tr>
 							      <th scope="row">Id :</th>
 							      <td><%=user.getId() %></td>
-							    	 <input name="id" type="hidden" 
-							          value="<%=user.getId() %>">
+							    	 <input name="id" type="hidden" value="<%=user.getId() %>">
 							    </tr>
 							    <tr>
 							      <th scope="row">Name :</th>
@@ -103,7 +101,6 @@
 							      <td><input type="text" name="gender" 
 							          value="<%=user.getGender() %>"
 							          class="form-control"></td>
-							  
 							    
 							     <tr>
 							      <th scope="row">About :</th>
@@ -113,7 +110,6 @@
 							      	  </textarea></td>
 							     
 							    </tr>
-							    
 							     
 							     <tr>
 							      <th scope="row">Profile Pic :</th>

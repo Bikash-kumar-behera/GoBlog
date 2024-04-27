@@ -34,11 +34,8 @@
 							error: function (data,textStatus,errorThrown)
 							{
 								console.log(data);
-							}
-							
-							
+							}	
 						})
-						
 						
 					}
 					

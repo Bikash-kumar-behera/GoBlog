@@ -1,5 +1,6 @@
 package com.servlet;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -60,7 +61,9 @@ public class AddPostServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			
 			
-			 String path = "C:/Users/Swapnil/eclipse-workspace/TechnicalBlog/src/main/webapp/";
+			String path = getServletContext().getRealPath("/");
+			File f = new File(path);
+			System.out.println(path);
 		//	String path = request.getRealPath("/");			
 			List<FileItem> file = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
 			for (FileItem item : file) 
@@ -117,7 +120,6 @@ public class AddPostServlet extends HttpServlet {
 				
 				if(postDao.savePost(post) > 0)
 				{
-				
 					Message msg = new Message("Post Added successfully","success","alert-success");
 	
 					session.setAttribute("msg", msg);
@@ -136,9 +138,7 @@ public class AddPostServlet extends HttpServlet {
 			//  	out.print("Failed");
 				}
 		
-		
 		} catch (FileUploadException e) {
-			
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();

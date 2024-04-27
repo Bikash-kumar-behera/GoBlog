@@ -46,7 +46,6 @@ object-fit: cover;
 				<h3 class="display-3">Welcome To GoBlog</h3>
 				<h3>GoBlog</h3>
 			<p>Publish your passions your way. Whether you'd like to share your knowledge, experiences or the latest news, create a unique and beautiful blog.</p>
-				<button class="btn btn-outline-light btn-lg bg-white" style="color:black"><span class="fa fa-user-plus"></span> Start ! its Free</button> &ensp;
 				<a href="login.jsp" class="btn btn-outline-light btn-lg bg-white" style="color:black"><span class="fa fa-user-circle fa-spin"></span> Login</a>
 			</div>
 		</div>
@@ -75,13 +74,13 @@ object-fit: cover;
 			<div class="col-md-4 mt-2">
 			
 			
-				<div class="card" >
-				<div class="text-center mt-2">
-				 	<img src="image/<%=p.getImage() %>" alt="<%=p.getTitle()%>" class="cov">
+				<div class="card" style="height: 600px; position:relative; overflow: hidden ">
+				<div class="text-center mt-2" style="max-height:200px; overflow: hidden">
+				 	<img src="image/<%=p.getImage() %>" alt="<%=p.getTitle()%>" class="cov contain h-auto w-auto">
 				</div>
 				  <div class="card-body">
 				    <h5 class="card-title"><%=p.getTitle() %></h5>
-				    <p class="card-text"><%=p.getContent() %></p>
+				    <p class="card-text" style="overflow: hidden;max-height: 250px"><%=p.getContent() %></p>
 			
 				    </div>
 				    <div class="card-footer bg-dark text-center">
